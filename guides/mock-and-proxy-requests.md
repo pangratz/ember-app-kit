@@ -62,3 +62,14 @@ Ember.Route.extend({
   }
 });
 {% endhighlight %}
+
+### Use a different method
+
+Say you have a `package.json` with the following properies:
+
+{% highlight js %}
+  APIMethod: "proxy",
+  proxyURL: "http://apiserver.dev:3000"
+{% endhighlight %}
+
+If you want to test a new response in your app, you can quickly switch to the `stub` method by invoking `grunt server:stub`. This also works for `grunt server:proxy`, `grunt test:server:stub` and `grunt test:server:proxy`.
